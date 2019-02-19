@@ -1,0 +1,31 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+variables:
+  API_KEY: e4facea0503163737999a00b23078e8ecf2d4a6f
+  TriggerName: test-trigger
+
+trigger:
+- master
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '8.x'
+  displayName: 'Install Node.js'
+
+#- script: |
+#   npm install
+#   npm run build
+# displayName: 'npm install and build'
+
+- script: |
+    curl --silent \
+     -X 'POST' \
+     -H "x-api-key: ${API_KEY}" \
+     "https://console.jumpcloud.com/api/command/trigger/${TriggerName}"
