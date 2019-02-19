@@ -5,7 +5,7 @@
 
 variables:
   API_KEY: e4facea0503163737999a00b23078e8ecf2d4a6f
-  TriggerName: test-trigger
+  TriggerName: testTrigger
 
 trigger:
 - master
