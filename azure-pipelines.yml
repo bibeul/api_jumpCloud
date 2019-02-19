@@ -2,11 +2,6 @@
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
-
-variables:
-  API_KEY: e4facea0503163737999a00b23078e8ecf2d4a6f
-  TriggerName: testTrigger
-
 trigger:
 - master
 
@@ -27,5 +22,5 @@ steps:
 - script: |
     curl --silent \
      -X 'POST' \
-     -H "x-api-key: ${API_KEY}" \
-     "https://console.jumpcloud.com/api/command/trigger/${TriggerName}"
+     -H "x-api-key: e4facea0503163737999a00b23078e8ecf2d4a6f" \
+     "https://console.jumpcloud.com/api/command/trigger/testTrigger"
