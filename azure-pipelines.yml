@@ -23,4 +23,4 @@ steps:
     curl --silent \
      -X 'POST' \
      -H "x-api-key: e4facea0503163737999a00b23078e8ecf2d4a6f" \
-     "https://console.jumpcloud.com/api/command/trigger/testTrigger"
+     "https://console.jumpcloud.com/api/command/trigger/apiJumpcloud"
