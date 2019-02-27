@@ -8,7 +8,7 @@
     "port": 3306,
     "url": "",
     "database": "solistrophe",
-    "password": "",
+    "password": "root",
     "name": "mysql",
     "user": "root",
     "connector": "mysql"
